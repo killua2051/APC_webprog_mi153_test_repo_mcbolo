@@ -1,3 +1,7 @@
 Hello, this is the repository of Maverick Bolo.
 Added a second line.
+<<<<<<< HEAD
 helloooo
+=======
+Hi Mav! :)
+>>>>>>> fd2da2106a29a490115aca72ecede32137125991
