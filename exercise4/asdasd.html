@@ -18,6 +18,8 @@ h1 {
     font-size: 40;
 }
 
+.error {color: #FF0000;}
+
 </style>
 </head>
 <body>
@@ -60,7 +62,17 @@ h1 {
 
 <button type="button" onclick="document.getElementById('demo3').innerHTML = 'Sayaw ng Kamatayan (Dance of Death)'">Click Me!</button>
 
+<form action="welcome.php" method="post">
+Complete Name: <input type="text" name="name"><br>
+E-mail: <input type="text" name="email"><br>
+Home Address (Optional): <input type="text" name="homeadd"><br>
+<input type="radio" name="gender" value="female">Female
+<input type="radio" name="gender" value="male">Male
+<input type="submit">
+</form>
 
+Welcome <?php echo $_GET["name"]; ?><br>
+Your email address is: <?php echo $_GET["email"]; ?>
 
 
 
