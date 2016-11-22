@@ -1,3 +1,22 @@
+<?php
+	include_once 'dbconfig.php';
+	if(isset($_POST['submit']))
+		{
+			// variables for input data
+			$name = $_POST['name'];
+		    $email = $_POST['email'];
+			$website = $_POST['website'];
+			$gender = $_POST['gender'];
+			$comment = $_POST['comment'];
+			// variables for input data
+			
+			// sql query for inserting data into database			 
+			$sql_query = "INSERT INTO krotokov(name,email,website,gender,comment) VALUES ('$name','$email','$website','$gender','$comment')";
+			mysqli_query($con,$sql_query);
+			// sql query for inserting data into database
+		}
+?>
+
 <html>
 <head>
 <style>
