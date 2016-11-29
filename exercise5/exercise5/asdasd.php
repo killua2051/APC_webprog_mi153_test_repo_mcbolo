@@ -1,6 +1,6 @@
 <?php
 	include_once 'dbconfig.php';
-	if(isset($_POST['submit']))
+	if(isset($_POST['btn-save']))
 		{
 			// variables for input data
 			$name = $_POST['name'];
@@ -11,7 +11,8 @@
 			// variables for input data
 			
 			// sql query for inserting data into database			 
-			$sql_query = "INSERT INTO krotokov(name,email,website,gender,comment) VALUES ('$name','$email','$website','$gender','$comment')";
+			$sql_query = "INSERT INTO users(name,email,website,gender,comment) VALUES ('$name','$email','$website','$gender','$comment')";
+			echo $sql_query;
 			mysqli_query($con,$sql_query);
 			// sql query for inserting data into database
 		}
@@ -138,7 +139,7 @@ h1 {
     }
     ?>
 
-    <h2>PHP Form Validation Example</h2>
+    <h2>Insert your info:</h2>
     <p><span class="error">* required field.</span></p>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -157,7 +158,7 @@ h1 {
         <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
         <span class="error">* <?php echo $genderErr;?></span>
         <br><br>
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="btn-save">
     </form>
 
     <?php
