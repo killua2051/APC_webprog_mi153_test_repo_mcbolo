@@ -4,6 +4,7 @@
 		{
 			// variables for input data
 			$name = $_POST['name'];
+			$nName = $_POST['nName'];
 		    $email = $_POST['email'];
 			$website = $_POST['website'];
 			$gender = $_POST['gender'];
@@ -42,6 +43,7 @@ h1 {
 
 </style>
 </head>
+<title> Pururut </title>
 <body>
 
 <h1>Maverick Jave C. Bolo</h1>
@@ -84,8 +86,8 @@ h1 {
 
     <?php
     // define variables and set to empty values
-    $nameErr = $emailErr = $genderErr = $websiteErr = "";
-    $name = $email = $gender = $comment = $website = "";
+    $nameErr = $nNameErr =$emailErr = $genderErr = $cNumErr = $websiteErr = "";
+    $name = $nName = $email = $gender = $cNum = $comment = $website = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["name"])) {
@@ -98,6 +100,15 @@ h1 {
             }
         }
 
+		if (empty($_POST["nName"])) {
+				$nNameErr = "Nickname is required. ";
+			} else {
+				$nName = test_input($_POST["nName"]);
+				if (!preg_match("/^[a-zA-Z ]*$/",$nName)) {
+				$nNameErr = "Only letters are allowed."; 
+				}
+			}
+		
         if (empty($_POST["email"])) {
             $emailErr = "Email is required";
         } else {
@@ -117,6 +128,15 @@ h1 {
                 $websiteErr = "Invalid URL";
             }
         }
+		
+		if (empty($_POST["cNum"])) {
+				$cNumErr = "Number is required.";
+			} else {
+				$cNum = test_input($_POST["cNum"]);
+				if (!filter_var($cNum, FILTER_VALIDATE_INT) === FALSE) {
+				$cNumErr = "Only numbers are allowed."; 
+				}
+			}
 
         if (empty($_POST["comment"])) {
             $comment = "";
@@ -145,13 +165,19 @@ h1 {
         Name: <input type="text" name="name" value="<?php echo $name;?>">
         <span class="error">* <?php echo $nameErr;?></span>
         <br><br>
+		Nickname: <input type="text" name="name" value="<?php echo $name;?>">
+        <span class="error">* <?php echo $nNameErr;?></span>
+        <br><br>
         E-mail: <input type="text" name="email" value="<?php echo $email;?>">
         <span class="error">* <?php echo $emailErr;?></span>
         <br><br>
         Website: <input type="text" name="website" value="<?php echo $website;?>">
         <span class="error"><?php echo $websiteErr;?></span>
         <br><br>
-        Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+		Cellphone No.: <input type="text" name="name" value="<?php echo $name;?>">
+        <span class="error">* <?php echo $cNumErr;?></span>
+        <br><br>       
+		Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
         <br><br>
         Gender:
         <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
@@ -165,9 +191,13 @@ h1 {
     echo "<h2>Your Input:</h2>";
     echo $name;
     echo "<br>";
+	echo $nName;
+    echo "<br>";
     echo $email;
     echo "<br>";
     echo $website;
+    echo "<br>";
+	echo $cNum;
     echo "<br>";
     echo $comment;
     echo "<br>";
