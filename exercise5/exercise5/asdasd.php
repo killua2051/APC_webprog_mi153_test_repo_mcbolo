@@ -165,7 +165,7 @@ h1 {
         Name: <input type="text" name="name" value="<?php echo $name;?>">
         <span class="error">* <?php echo $nameErr;?></span>
         <br><br>
-		Nickname: <input type="text" name="name" value="<?php echo $name;?>">
+		Nickname: <input type="text" name="nName" value="<?php echo $nName;?>">
         <span class="error">* <?php echo $nNameErr;?></span>
         <br><br>
         E-mail: <input type="text" name="email" value="<?php echo $email;?>">
@@ -174,7 +174,7 @@ h1 {
         Website: <input type="text" name="website" value="<?php echo $website;?>">
         <span class="error"><?php echo $websiteErr;?></span>
         <br><br>
-		Cellphone No.: <input type="text" name="name" value="<?php echo $name;?>">
+		Cellphone No.: <input type="integer" name="cNum" value="<?php echo $cNum;?>">
         <span class="error">* <?php echo $cNumErr;?></span>
         <br><br>       
 		Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
