@@ -7,12 +7,13 @@
 			$nName = $_POST['nName'];
 		    $email = $_POST['email'];
 			$website = $_POST['website'];
+			$cNum = $_POST['cNum'];
 			$gender = $_POST['gender'];
 			$comment = $_POST['comment'];
 			// variables for input data
 			
 			// sql query for inserting data into database			 
-			$sql_query = "INSERT INTO users(name,email,website,gender,comment) VALUES ('$name','$email','$website','$gender','$comment')";
+			$sql_query = "INSERT INTO users(name,email,website,gender,comment) VALUES ('$name','$nName','$email','$website','$cNum','$gender','$comment')";
 			echo $sql_query;
 			mysqli_query($con,$sql_query);
 			// sql query for inserting data into database
