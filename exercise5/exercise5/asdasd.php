@@ -13,7 +13,7 @@
 			// variables for input data
 			
 			// sql query for inserting data into database			 
-			$sql_query = "INSERT INTO users(name,email,website,gender,comment) VALUES ('$name','$nName','$email','$website','$cNum','$gender','$comment')";
+			$sql_query = "INSERT INTO users(name,nName,email,website,cNum,gender,comment) VALUES ('$name','$nName','$email','$website','$cNum','$gender','$comment')";
 			echo $sql_query;
 			mysqli_query($con,$sql_query);
 			// sql query for inserting data into database

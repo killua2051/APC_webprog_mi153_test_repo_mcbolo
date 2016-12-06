@@ -29,7 +29,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `krotokov` (
   `id` int(11) NOT NULL,
   `name` varchar(45) NOT NULL,
+  `nName` varchar(45) NOT NULL,
   `website` varchar(45) NOT NULL,
+  `cNum` int(11) NOT NULL,
   `gender` varchar(1) NOT NULL,
   `email` varchar(45) NOT NULL,
   `comment` text NOT NULL
