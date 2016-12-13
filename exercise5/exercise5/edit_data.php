@@ -2,20 +2,24 @@
 include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
- $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
+ $sql_query="SELECT * FROM krotokov WHERE user_id=".$_GET['edit_id'];
  $result_set=mysqli_query($con, $sql_query);
  $fetched_row=mysqli_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
 {
  // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
+ $name = $_POST['name'];
+ $nName = $_POST['nName'];
+ $email = $_POST['email'];
+ $website = $_POST['website'];
+ $cNum = $_POST['cNum'];
+ $gender = $_POST['gender'];
+ $comment = $_POST['comment'];
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name' WHERE user_id=".$_GET['edit_id'];
+ $sql_query = "UPDATE krotokov SET name='$name',nName='$nName',email='$email',website='$website',cNum='$cNum',gender='$gender',comment='$comment' WHERE user_id=".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
@@ -64,13 +68,25 @@ if(isset($_POST['btn-cancel']))
     <form method="post">
     <table align="center">
     <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
+    <td><input type="text" name="name" placeholder="Name" value="<?php echo $fetched_row['name']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
+    <td><input type="text" name="nName" placeholder="Nickname" value="<?php echo $fetched_row['nName']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+    <td><input type="text" name="email" placeholder="E-Mail" value="<?php echo $fetched_row['email']; ?>" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="website" placeholder="Website" value="<?php echo $fetched_row['website']; ?>" required /></td>
+	<tr>
+    <td><input type="integer" name="cNum" placeholder="Cellphone No." value="<?php echo $fetched_row['cNum']; ?>" required /></td>
+    </tr>
+	<tr>
+    <td><input type="radio" name="gender" <?php if (isset($gender) && $gender=="female"); ?>" required /></td>
+    </tr>
+	<tr>
+    <td><input type="radio" name="gender" <?php if (isset($gender) && $gender=="male"); ?>" required /></td>
+    </tr>
     </tr>
     <tr>
     <td>
