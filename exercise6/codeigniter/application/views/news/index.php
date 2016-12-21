@@ -61,16 +61,16 @@
 
 			<p>
 			<br>Favorite websites:
-			<br><a href= "https://www.youtube.com"><img border="0" alt="Youtube" src="<?php echo base_url('Images/youtube.jpg');?>" width=100 height=100></a>
+			<br><a href= "https://gaming.youtube.com/"><img border="0" alt="Youtube Gaming" src="<?php echo base_url('Images/YouTube-Gaming-Icon.jpg');?>" width=100 height=100></a>
 			<a href= "https://www.facebook.com"><img border="0" alt="Facebook" src="<?php echo base_url('Images/facebook.jpg');?>" width=100 height=100></a>
 			</p>
 
 			<p>
 			<br>Favorite games:
 			<br><a href= "https://lol.garena.ph/"><img border="0" alt="League of Legends" src="<?php echo base_url('Images/lol.jpg');?>" width=100 height=100></a>
-			<a href= "http://www.rfolympic.com/"><img border="0" alt="RF Online" src="<?php echo base_url('Images/MTG.jpg');?>" width=100 height=100></a>
-			<a href= "http://dyinglightgame.com/?mainsite"><img border="0" alt="Dying Light" src="<?php echo base_url('Images/minecraft.jpg');?>" width=100 height=100></a>
-			<a href= "http://www2.ea.com/skate-3"><img border="0" alt="Skate 3" src="<?php echo base_url('Images/minecraft.jpg');?>" width=100 height=100></a>
+			<a href= "http://www.rfolympic.com/"><img border="0" alt="RF Online" src="<?php echo base_url('Images/rf_onlinepng');?>" width=100 height=100></a>
+			<a href= "http://dyinglightgame.com/?mainsite"><img border="0" alt="Dying Light" src="<?php echo base_url('Images/Dyinglight.jpg');?>" width=100 height=100></a>
+			<a href= "http://www2.ea.com/skate-3"><img border="0" alt="Skate 3" src="<?php echo base_url('Images/skate3.jpg');?>" width=100 height=100></a>
 			</p>
 
 			<h2> Trivias about me </h2>
