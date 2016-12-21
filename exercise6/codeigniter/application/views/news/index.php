@@ -44,13 +44,13 @@
 				<td>Mav</td>
 			</tr>
 			<tr>
-				<td id="PI">Interests: </td>
-				<td id="PI">I like reading about conspiracy theories and unsolved murder cases. </td>
+				<td>Hobbies: </td>
+				<td>Skateboarding, Playing Online Games, Cycling, Training Mixed Martial Arts</td>
 			</tr>
 			
 			<tr>
-				<td id="PI">Birthdate:</td>
-				<td id="PI">February 15, 1999</td>
+				<td>Interests: </td>
+				<td>Bikes, Computers, Skateboards, Mixed Martial Arts</td>
 			</tr>
 			
 			</table>
@@ -63,39 +63,37 @@
 			<br>Favorite websites:
 			<br><a href= "https://www.youtube.com"><img border="0" alt="Youtube" src="<?php echo base_url('Images/youtube.jpg');?>" width=100 height=100></a>
 			<a href= "https://www.facebook.com"><img border="0" alt="Facebook" src="<?php echo base_url('Images/facebook.jpg');?>" width=100 height=100></a>
-			<a href= "https://www.twitter.com"><img border="0" alt="Twitter" src="<?php echo base_url('Images/twitter.jpg');?>" width=100 height=100></a>
 			</p>
 
 			<p>
 			<br>Favorite games:
 			<br><a href= "https://lol.garena.ph/"><img border="0" alt="League of Legends" src="<?php echo base_url('Images/lol.jpg');?>" width=100 height=100></a>
-			<a href= "http://store.steampowered.com/app/316010/"><img border="0" alt="Magic:The Gathering" src="<?php echo base_url('Images/MTG.jpg');?>" 
-
-width=100 height=100></a>
-			<a href= "https://minecraft.net/en/"><img border="0" alt="Minecraft" src="<?php echo base_url('Images/minecraft.jpg');?>" width=100 height=100></a>
+			<a href= "http://www.rfolympic.com/"><img border="0" alt="RF Online" src="<?php echo base_url('Images/MTG.jpg');?>" width=100 height=100></a>
+			<a href= "http://dyinglightgame.com/?mainsite"><img border="0" alt="Dying Light" src="<?php echo base_url('Images/minecraft.jpg');?>" width=100 height=100></a>
+			<a href= "http://www2.ea.com/skate-3"><img border="0" alt="Skate 3" src="<?php echo base_url('Images/minecraft.jpg');?>" width=100 height=100></a>
 			</p>
 
-			<h2> Trivia! </h2>
+			<h2> Trivias about me </h2>
 
 			<p>
-				1. My most common gaming username:
+				1. Where does my name come from?
 			</p>
 
 			<p id="q1">
 				ANSWER
 			</p>
 
-			<button type="button" onclick="document.getElementById('q1').innerHTML = 'NZAAXD or VoidDoubleA'">Click to see answer</button>
+			<button type="button" onclick="document.getElementById('q1').innerHTML = 'From the movie Top Gun.'">Click to see answer</button>
 
 			<p>
-				2. My favorite subject:
+				2. What is your main role in League of Legends?
 			</p>
 
 			<p id="q2">
 				ANSWER
 			</p>
 
-			<button type="button" onclick="document.getElementById('q2').innerHTML = 'Anything that has Math'">Click to see answer</button>
+			<button type="button" onclick="document.getElementById('q2').innerHTML = 'Jungler or AD Carry'">Click to see answer</button>
 
 			<p>
 				3. How long have I been playing Magic?
