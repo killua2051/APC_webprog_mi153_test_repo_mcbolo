@@ -83,7 +83,7 @@
 				ANSWER
 			</p>
 
-			<button type="button" onclick="document.getElementById('q1').innerHTML = 'From the movie Top Gun.'">Click to see answer</button>
+			<button type="button" onclick="document.getElementById('q1').innerHTML = 'From the movie Top Gun.'">Click this mate!</button>
 
 			<p>
 				2. What is your main role in League of Legends?
@@ -93,37 +93,37 @@
 				ANSWER
 			</p>
 
-			<button type="button" onclick="document.getElementById('q2').innerHTML = 'Jungler or AD Carry'">Click to see answer</button>
+			<button type="button" onclick="document.getElementById('q2').innerHTML = 'Jungler or AD Carry'">Click this mate!</button>
 
 			<p>
-				3. How long have I been playing Magic?
+				3. What is your main martial art? 
 			</p>
 
 			<p id="q3">
 				ANSWER
 			</p>
 
-			<button type="button" onclick="document.getElementById('q3').innerHTML = 'Started on September 2016'">Click to see answer</button>
+			<button type="button" onclick="document.getElementById('q3').innerHTML = 'Sayaw ng Kamatayan (Yaw-Yan)'">Click this mate!</button>
 
 			<p>
-				4. What else do you do in your free time?
+				4. What do I do when I have free time?
 			</p>
 
 			<p id="q4">
 				ANSWER
 			</p>
 
-			<button type="button" onclick="document.getElementById('q4').innerHTML = 'Play on my PS3, or play basketball with friends.'">Click to see answer</button>
+			<button type="button" onclick="document.getElementById('q4').innerHTML = 'Go to places far from our house, with friends.'">Click this mate!</button>
 
 			<p>
-				5. Where do you go to buy magic cards?
+				5. Who is my favorite professional cyclist?
 			</p>
 
 			<p id="q5">
 				ANSWER
 			</p>
 
-			<button type="button" onclick="document.getElementById('q5').innerHTML = 'Hobby shops in taft or SM Megamall, or in Neutral grounds.'">Click to see answer</button>
+			<button type="button" onclick="document.getElementById('q5').innerHTML = 'Peter Sagan'">Click this mate!</button>
 
 			</center>
 
