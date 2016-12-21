@@ -37,11 +37,11 @@
 
 		<body>
 		<center>
-			<table id="PI">
+			<table>
 			<tr>
 				
-				<td id="PI">Hobbies: </td>
-				<td id="PI">Reading books and listening to music (+eating)</td>
+				<td>Nickname: </td>
+				<td>Mav</td>
 			</tr>
 			<tr>
 				<td id="PI">Interests: </td>
