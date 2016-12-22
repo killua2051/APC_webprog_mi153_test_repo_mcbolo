@@ -4,7 +4,7 @@
 		{
 			$sql_query="SELECT * FROM krotokov WHERE user_id=".$_GET['edit_id'];
 			$result_set=mysqli_query($con,$sql_query);
-		
+			$fetched_row=mysqli_fetch_array($result_set);
 		}
 			// variables for input data
 			$name = $_POST['name'];
