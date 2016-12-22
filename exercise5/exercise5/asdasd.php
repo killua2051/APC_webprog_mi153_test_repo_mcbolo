@@ -191,6 +191,7 @@ h1 {
 	$sql_query="SELECT * FROM krotokov";
 	$result_set=mysqli_query($con,$sql_query);
 	while($row=mysqli_fetch_row($result_set))
+	{		
     ?>
 	 echo "<h2>Your Input:</h2>";
     echo $name;
@@ -207,9 +208,10 @@ h1 {
     echo "<br>";
     echo $gender;
 
-
-
-
+	<?php
+	
+	}
+?>
 
 </body>
 </html>
