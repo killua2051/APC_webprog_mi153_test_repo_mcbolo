@@ -4,16 +4,16 @@
 		{
 			// variables for input data
 			$name = $_POST['name'];
-			$nName = $_POST['nName'];
+			$nName = $_POST['nickname'];
 		    $email = $_POST['email'];
 			$website = $_POST['website'];
-			$cNum = $_POST['cNum'];
+			$cNum = $_POST['cellphoneno'];
 			$gender = $_POST['gender'];
 			$comment = $_POST['comment'];
 			// variables for input data
 			
 			// sql query for inserting data into database			 
-			$sql_query = "INSERT INTO krotokov(name,nickname,email,website,cellphoneno,gender,comment) VALUES ('$name','$nickname','$email','$website','$cNum','$gender','$comment')";
+			$sql_query = "INSERT INTO krotokov(name,nickname,email,website,cellphoneno,gender,comment) VALUES ('$name','$nickname','$email','$website','$cellphoneno','$gender','$comment')";
 			mysqli_query($con,$sql_query);
 			// sql query for inserting data into database
 		}
@@ -86,8 +86,8 @@ h1 {
 
     <?php
     // define variables and set to empty values
-    $nameErr = $nNameErr =$emailErr = $genderErr = $cNumErr = $websiteErr = "";
-    $name = $nName = $email = $gender = $cNum = $comment = $website = "";
+    $nameErr = $nicknameErr =$emailErr = $genderErr = $cellphonenoErr = $websiteErr = "";
+    $name = $nickname = $email = $gender = $cellphoneno = $comment = $website = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["name"])) {
@@ -100,12 +100,12 @@ h1 {
             }
         }
 
-		if (empty($_POST["nName"])) {
-				$nNameErr = "Nickname is required. ";
+		if (empty($_POST["nickname"])) {
+				$nicknameErr = "Nickname is required. ";
 			} else {
-				$nName = test_input($_POST["nName"]);
-				if (!preg_match("/^[a-zA-Z ]*$/",$nName)) {
-				$nNameErr = "Only letters are allowed."; 
+				$nickname = test_input($_POST["nickname"]);
+				if (!preg_match("/^[a-zA-Z ]*$/",$nickname)) {
+				$nicknameErr = "Only letters are allowed."; 
 				}
 			}
 		
@@ -129,12 +129,12 @@ h1 {
             }
         }
 		
-		if (empty($_POST["cNum"])) {
-				$cNumErr = "Number is required.";
+		if (empty($_POST["cellphoneno"])) {
+				$cellphonenoErr = "Number is required.";
 			} else {
-				$cNum = test_input($_POST["cNum"]);
+				$cellphoneno = test_input($_POST["cellphoneno"]);
 				if (!filter_var($cNum, FILTER_VALIDATE_INT) === FALSE) {
-				$cNumErr = "Only numbers are allowed."; 
+				$cellphonenoErr = "Only numbers are allowed."; 
 				}
 			}
 
@@ -165,8 +165,8 @@ h1 {
         Name: <input type="text" name="name" value="<?php echo $name;?>">
         <span class="error">* <?php echo $nameErr;?></span>
         <br><br>
-		Nickname: <input type="text" name="nName" value="<?php echo $nName;?>">
-        <span class="error">* <?php echo $nNameErr;?></span>
+		Nickname: <input type="text" name="nickname" value="<?php echo $nickname;?>">
+        <span class="error">* <?php echo $nicknameErr;?></span>
         <br><br>
         E-mail: <input type="text" name="email" value="<?php echo $email;?>">
         <span class="error">* <?php echo $emailErr;?></span>
@@ -174,8 +174,8 @@ h1 {
         Website: <input type="text" name="website" value="<?php echo $website;?>">
         <span class="error"><?php echo $websiteErr;?></span>
         <br><br>
-		Cellphone No.: <input type="integer" name="cNum" value="<?php echo $cNum;?>">
-        <span class="error">* <?php echo $cNumErr;?></span>
+		Cellphone No.: <input type="integer" name="cellphoneno" value="<?php echo $cellphoneno;?>">
+        <span class="error">* <?php echo $cellphonenoErr;?></span>
         <br><br>       
 		Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
         <br><br>
@@ -191,13 +191,13 @@ h1 {
 echo "<h2>Your Input:</h2>";
     echo $name;
     echo "<br>";
-	echo $nName;
+	echo $nickname;
     echo "<br>";
     echo $email;
     echo "<br>";
     echo $website;
     echo "<br>";
-	echo $cNum;
+	echo $cellphoneno;
     echo "<br>";
     echo $comment;
     echo "<br>";
