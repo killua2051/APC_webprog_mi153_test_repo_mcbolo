@@ -13,7 +13,7 @@
 			// variables for input data
 			
 			// sql query for inserting data into database			 
-			$sql_query = "INSERT INTO krotokov(name,nickname,email,website,cellphoneno,gender,comment) VALUES ('$name','$nickname','$email','$website','$cellphoneno','$gender','$comment')";
+			$sql_query = "INSERT INTO krotokov(name,nickname,email,website,cellphoneno,gender,comment) VALUES ('$name','$nName','$email','$website','$cNum','$gender','$comment')";
 			mysqli_query($con,$sql_query);
 			// sql query for inserting data into database
 		}
@@ -174,7 +174,7 @@ h1 {
         Website: <input type="text" name="website" value="<?php echo $website;?>">
         <span class="error"><?php echo $websiteErr;?></span>
         <br><br>
-		Cellphone No.: <input type="integer" name="cellphoneno" value="<?php echo $cellphoneno;?>">
+		Cellphone No.: <input type="text" name="cellphoneno" value="<?php echo $cellphoneno;?>">
         <span class="error">* <?php echo $cellphonenoErr;?></span>
         <br><br>       
 		Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
