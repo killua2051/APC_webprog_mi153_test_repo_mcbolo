@@ -1,6 +1,6 @@
 <?php
 	include_once 'dbconfig.php';
-	if(isset($_POST['btn-save']))
+	if(isset($_POST['submit']))
 		{
 			// variables for input data
 			$name = $_POST['name'];
@@ -185,7 +185,7 @@ h1 {
         <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
         <span class="error">* <?php echo $genderErr;?></span>
         <br><br>
-        <input type="submit" name="btn-save">
+        <input type="submit" name="submit" value="Submit">
     </form>
 
     <?php
