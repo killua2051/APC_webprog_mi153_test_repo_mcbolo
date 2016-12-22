@@ -2,6 +2,9 @@
 	include_once 'dbconfig.php';
 	if(isset($_POST['submit']))
 		{
+			$sql_query="SELECT * FROM krotokov WHERE user_id=".$_GET['edit_id'];
+		
+		}
 			// variables for input data
 			$name = $_POST['name'];
 			$nName = $_POST['nName'];
