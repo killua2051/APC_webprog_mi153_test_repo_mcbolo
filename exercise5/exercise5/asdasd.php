@@ -188,7 +188,10 @@ h1 {
     </form>
 
     <?php
-    echo "<h2>Your Input:</h2>";
+	$sql_query="SELECT * FROM krotokov";
+	
+    ?>
+	 echo "<h2>Your Input:</h2>";
     echo $name;
     echo "<br>";
 	echo $nName;
@@ -202,7 +205,6 @@ h1 {
     echo $comment;
     echo "<br>";
     echo $gender;
-    ?>
 
 
 
