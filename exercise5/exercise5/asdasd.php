@@ -189,7 +189,7 @@ h1 {
 
     <?php
 	$sql_query="SELECT * FROM krotokov";
-	
+	$result_set=mysqli_query($con,$sql_query);
     ?>
 	 echo "<h2>Your Input:</h2>";
     echo $name;
