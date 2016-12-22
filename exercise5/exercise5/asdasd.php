@@ -13,7 +13,7 @@
 			// variables for input data
 			
 			// sql query for inserting data into database			 
-			$sql_query = "INSERT INTO krotokov(name,n,email,website,cNum,gender,comment) VALUES ('$name','$nName','$email','$website','$cNum','$gender','$comment')";
+			$sql_query = "INSERT INTO krotokov(name,nickname,email,website,cNum,gender,comment) VALUES ('$name','$nName','$email','$website','$cNum','$gender','$comment')";
 			mysqli_query($con,$sql_query);
 			// sql query for inserting data into database
 		}
