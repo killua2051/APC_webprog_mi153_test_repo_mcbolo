@@ -14,7 +14,6 @@
 			
 			// sql query for inserting data into database			 
 			$sql_query = "INSERT INTO krotokov(name,nName,email,website,cNum,gender,comment) VALUES ('$name','$nName','$email','$website','$cNum','$gender','$comment')";
-			echo $sql_query;
 			mysqli_query($con,$sql_query);
 			// sql query for inserting data into database
 		}
