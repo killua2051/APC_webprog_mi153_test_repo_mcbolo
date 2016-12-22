@@ -3,6 +3,7 @@
 	if(isset($_POST['submit']))
 		{
 			$sql_query="SELECT * FROM krotokov WHERE user_id=".$_GET['edit_id'];
+			$result_set=mysqli_query($con,$sql_query);
 		
 		}
 			// variables for input data
